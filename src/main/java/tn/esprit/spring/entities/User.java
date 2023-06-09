@@ -26,6 +26,8 @@ public class User implements Serializable {
 	// Commaentaire 4
 	// hhhh
 	// modif 5
+	// modif test 6
+
 	private static final long serialVersionUID = 1L;
 
 	@Id

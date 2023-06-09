@@ -16,23 +16,14 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	UserRepository userRepository;
 
+
+
 	private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
 
 	@Override
 	public List<User> retrieveAllUsers() { 
-		List<User> users = null; 
-		try {
 
-			l.info("In Method retrieveAllUsers :");
-			
-			users = userRepository.findAll(); 
-			 
-			l.info("Out of Method retrieveAllUsers with Success : " + users.size());
-		}catch (Exception e) {
-			l.error("Out of Method retrieveAllUsers with Errors : ", e); 
-		}
-		
-		return users;
+		return null;
 	}
 
 
@@ -88,14 +79,14 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public User retrieveUser(String id) {
-		User u = null; 
+		User u = null;
 		try {
-			u =  userRepository.findById(Long.parseLong(id)).get(); 
+			u =  userRepository.findById(Long.parseLong(id)).get();
 
 		} catch (Exception e) {
 		}
 
-		return u; 
+		return u;
 	}
 
 	
