@@ -50,4 +50,11 @@ class UserServiceImplMock {
 		Assertions.assertNotNull(user1);
 	}
 
+	@Test
+	public void testRetrieveAllUser() {
+		Mockito.when(userRepository.findAll()).thenReturn(listUsers);
+		List<User> listUsers = userService.retrieveAllUsers();
+		Assertions.assertNotNull(listUsers);
+	}
+
 }
