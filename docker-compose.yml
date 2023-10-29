@@ -13,7 +13,7 @@ services:
   timesheet-backend:
     depends_on:
       - mysqldb
-    image: achat:1.0
+    image: mouradhassini/timesheet-devops:1.0.0
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: root_password
